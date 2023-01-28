@@ -1,8 +1,11 @@
 package com.lmn.demo.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.lmn.demo.dao.UserMapper;
 import com.lmn.demo.entity.User;
 import com.lmn.demo.service.UserService;
+import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,4 +26,10 @@ public class UserServiceImpl implements UserService {
     public List<User> getUserList() {
         return userMapper.getUserList();
     }
+
+    @Override
+    public List<User> getUserList(RowBounds rowBounds) {
+        return userMapper.getUserList(rowBounds);
+    }
+
 }

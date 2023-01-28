@@ -2,6 +2,7 @@ package com.lmn.demo.dao;
 
 import com.lmn.demo.entity.User;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.session.RowBounds;
 
 import java.util.List;
 
@@ -14,5 +15,6 @@ import java.util.List;
 @Mapper
 public interface UserMapper{
     List<User> getUserList();
+    List<User> getUserList(RowBounds rowBounds);
 }
 

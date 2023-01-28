@@ -1,6 +1,8 @@
 package com.lmn.demo.service;
 
+import com.github.pagehelper.PageInfo;
 import com.lmn.demo.entity.User;
+import org.apache.ibatis.session.RowBounds;
 
 import java.util.List;
 
@@ -12,4 +14,5 @@ import java.util.List;
  */
 public interface UserService{
     List<User> getUserList();
+    List<User> getUserList(RowBounds rowBounds);
 }

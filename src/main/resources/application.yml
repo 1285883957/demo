@@ -6,5 +6,11 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: lmn
     password: Lmn123456@
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
 mybatis:
   mapper-locations: classpath:com/lmn/demo/dao/mapping/*.xml
+  #开启驼峰命名规则自动转换
+  configuration:
+    map-underscore-to-camel-case: true
